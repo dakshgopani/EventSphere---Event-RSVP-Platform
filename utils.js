@@ -1,5 +1,5 @@
 // Base URL of your AWS API Gateway endpoint.
-const API_BASE_URL = 'https://7or1nskyea.execute-api.ap-south-1.amazonaws.com'; // Change this to match your own API Gateway URL
+const API_BASE_URL = window.APP_CONFIG.API_BASE_URL; // Change this to match your own API Gateway URL
 
 /* Converts a date string (e.g. 2025-11-07T00:00:00Z)
   into a readable format like “Friday, November 7, 2025”.

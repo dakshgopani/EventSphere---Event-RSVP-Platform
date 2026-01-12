@@ -60,3 +60,5 @@ coverage/
 *.zip
 *.tar.gz
 *.tgz
+
+config.js
