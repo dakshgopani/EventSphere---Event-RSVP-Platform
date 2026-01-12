@@ -1,0 +1,47 @@
+CREATE TABLE events(
+	event_id VARCHAR(64) PRIMARY KEY,
+	title VARCHAR(200) NOT NULL,
+	description TEXT,
+	start_at DATETIME NOT NULL,
+	venue VARCHAR(200),
+	banner_url VARCHAR(500),
+	created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+SELECT * FROM events;
+
+-- INSERT INTO events(event_id, title, description, start_at, venue, banner_url)
+-- VALUES
+-- (
+-- 	'aws-meetup-mumbai-2026',
+-- 	'AWS User Group Mumbai Monthly Meetup 2026',
+-- 	'Join fellow builders for lightning talks, live demos, and networking with AWS enthusiasts in Mumbai.',
+-- 	'2026-02-01 18:00:00',
+-- 	'Nesco Grounds, Mumbai',
+-- 	''
+-- ),
+-- (
+-- 	'cloud-security-summit-india-2026',
+-- 	'Cloud Security Summit India 2026',
+-- 	'A full-day conference focused on cloud security best practices, DevSecOps, and real-world AWS security case studies.',
+-- 	'2026-03-15 09:30:00',
+-- 	'Jio World Convention Centre, Mumbai',
+-- 	''
+-- );
+INSERT INTO events(event_id, title, description, start_at, venue, banner_url)
+VALUES
+(
+	'ml-ai-summit-india-2026',
+	'Machine Learning & AI Summit India 2026',
+	'A premier conference focused on machine learning, deep learning, generative AI, and real-world AI deployments across industries.',
+	'2026-05-22 09:00:00',
+	'BKC, Mumbai',
+	''
+);
+
+UPDATE events
+SET banner_url = 'https://d34am4a20qv1p8.cloudfront.net/banners/b1.jpg'
+WHERE event_id = 'aws-meetup-mumbai-2026'
+
+SELECT * FROM events;
+
